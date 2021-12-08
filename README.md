@@ -4,6 +4,6 @@ I made a robot from scratch (without using a kit) ; I chose and bought the compo
 
 It is controlled by a Raspberry Pi Pico microcontroller, the code of which can be found on this repo (main.py).
 
-It has a Bluetooth antenna so I programmed an Android app in Kotlin to control it. The code can be found in the Edwina folder (yes, because the robot is named Edwina).
+It has a Bluetooth antenna so I programmed an Android app in Kotlin to control it. The code can be found in the AndroidApp branch.
 
 The whole project is described here : http://perso.ens-lyon.fr/joel.charles-rebuffe/public_html/2021/11/08/robot-bluetooth-diy/
