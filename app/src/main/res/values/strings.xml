@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Edwina</string>
+    <string name="connect_edwina">Connecter Edwina</string>
+    <string name="connect_info">Edwina n\'est pas connectée</string>
+    <string name="left_arm">Bras gauche</string>
+    <string name="right_arm">Bras droit</string>
+    <string name="right_led">LED</string>
+    <string name="left_led">LED</string>
+    <string name="hand">Main</string>
+    <string name="direction_text">Direction</string>
+    <string name="led">LED</string>
+    <string name="center">Centrer</string>
+    <string name="head_text">Tête</string>
+    <string name="not_paired_error">Vous devez appairer votre appareil à Edwina dans les paramètres</string>
+    <string name="connection_failed">Connexion à Edwina impossible. Veuillez vérifier que le robot est bien allumé</string>
+    <string name="connection_succeeded">Edwina est connectée</string>
+    <string name="already_connected">Edwina est déjà connectée</string>
+</resources>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connect_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.130"
+        app:layout_constraintStart_toEndOf="@+id/connect"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <Button
+        android:id="@+id/connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/connect_edwina"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <SeekBar
+        android:id="@+id/left_arm_bar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:rotation="270"
+        android:max="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connect"
+        app:layout_constraintVertical_bias="0.406" />
+
+    <SeekBar
+        android:id="@+id/right_arm_bar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:rotation="270"
+        android:max="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toEndOf="@+id/left_arm_bar"
+        app:layout_constraintTop_toBottomOf="@+id/connect"
+        app:layout_constraintVertical_bias="0.406" />
+
+    <TextView
+        android:id="@+id/left_arm_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/left_arm"
+        app:layout_constraintBottom_toTopOf="@+id/left_arm_bar"
+        app:layout_constraintEnd_toEndOf="@+id/left_arm_bar"
+        app:layout_constraintStart_toStartOf="@+id/left_arm_bar"
+        app:layout_constraintTop_toBottomOf="@+id/connect"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/right_arm_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/right_arm"
+        app:layout_constraintBottom_toTopOf="@+id/right_arm_bar"
+        app:layout_constraintEnd_toEndOf="@+id/right_arm_bar"
+        app:layout_constraintStart_toStartOf="@+id/right_arm_bar"
+        app:layout_constraintTop_toBottomOf="@+id/info"
+        app:layout_constraintVertical_bias="0.176" />
+
+    <Switch
+        android:id="@+id/left_led"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/right_led"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/left_arm_bar"
+        app:layout_constraintStart_toStartOf="@+id/left_arm_bar"
+        app:layout_constraintTop_toBottomOf="@+id/left_arm_bar"
+        app:layout_constraintVertical_bias="0.791" />
+
+    <Switch
+        android:id="@+id/right_led"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/left_led"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/right_arm_bar"
+        app:layout_constraintStart_toStartOf="@+id/right_arm_bar"
+        app:layout_constraintTop_toBottomOf="@+id/left_arm_bar"
+        app:layout_constraintVertical_bias="0.791" />
+
+    <SeekBar
+        android:id="@+id/hand_bar"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:max="180"
+        app:layout_constraintBottom_toBottomOf="@+id/right_arm_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toStartOf="@+id/right_arm_bar"
+        app:layout_constraintTop_toBottomOf="@+id/right_arm_text" />
+
+    <SeekBar
+        android:id="@+id/head_bar"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:max="180"
+        android:progress="84"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@+id/right_led"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toStartOf="@+id/right_arm_bar"
+        app:layout_constraintTop_toBottomOf="@+id/right_arm_bar" />
+
+    <TextView
+        android:id="@+id/hand_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="@string/hand"
+        app:layout_constraintBottom_toTopOf="@+id/hand_bar"
+        app:layout_constraintEnd_toEndOf="@+id/hand_bar"
+        app:layout_constraintStart_toStartOf="@+id/hand_bar" />
+
+    <TextView
+        android:id="@+id/head_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/head_text"
+        app:layout_constraintBottom_toTopOf="@+id/head_bar"
+        app:layout_constraintEnd_toEndOf="@+id/hand_bar"
+        app:layout_constraintStart_toStartOf="@+id/hand_bar" />
+
+    <TextView
+        android:id="@+id/direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/direction_text"
+        app:layout_constraintBottom_toBottomOf="@+id/left_arm_text"
+        app:layout_constraintEnd_toStartOf="@+id/right_arm_bar"
+        app:layout_constraintStart_toEndOf="@+id/left_arm_bar"
+        app:layout_constraintTop_toBottomOf="@+id/connect" />
+
+    <Switch
+        android:id="@+id/head_led"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/led"
+        app:layout_constraintBottom_toBottomOf="@+id/right_led"
+        app:layout_constraintEnd_toStartOf="@+id/right_led"
+        app:layout_constraintStart_toEndOf="@+id/left_led"
+        app:layout_constraintTop_toTopOf="@+id/right_led" />
+
+    <ImageView
+        android:id="@+id/right_arrow"
+        android:layout_width="60dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginRight="172dp"
+        app:layout_constraintBottom_toBottomOf="@+id/right_arm_bar"
+        app:layout_constraintEnd_toEndOf="@+id/right_arm_bar"
+        app:layout_constraintTop_toTopOf="@+id/right_arm_bar"
+        app:srcCompat="@drawable/arrow" />
+
+    <ImageView
+        android:id="@+id/up_arrow"
+        android:layout_width="60dp"
+        android:layout_height="28dp"
+        android:rotation="270"
+        app:layout_constraintBottom_toTopOf="@+id/center"
+        app:layout_constraintEnd_toStartOf="@+id/right_arm_bar"
+        app:layout_constraintStart_toEndOf="@+id/left_arm_bar"
+        app:layout_constraintTop_toBottomOf="@+id/direction"
+        app:srcCompat="@drawable/arrow" />
+
+    <ImageView
+        android:id="@+id/down_arrow"
+        android:layout_width="60dp"
+        android:layout_height="28dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toTopOf="@+id/head_led"
+        app:layout_constraintEnd_toStartOf="@+id/right_arm_bar"
+        app:layout_constraintStart_toEndOf="@+id/left_arm_bar"
+        app:layout_constraintTop_toBottomOf="@+id/center"
+        app:srcCompat="@drawable/arrow" />
+
+    <ImageView
+        android:id="@+id/left_arrow"
+        android:layout_width="60dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginLeft="172dp"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@+id/left_arm_bar"
+        app:layout_constraintStart_toStartOf="@+id/left_arm_bar"
+        app:layout_constraintTop_toTopOf="@+id/left_arm_bar"
+        app:srcCompat="@drawable/arrow" />
+
+    <Button
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/center"
+        app:layout_constraintBottom_toBottomOf="@+id/right_arrow"
+        app:layout_constraintEnd_toStartOf="@+id/right_arrow"
+        app:layout_constraintStart_toEndOf="@+id/left_arrow"
+        app:layout_constraintTop_toTopOf="@+id/right_arrow" />
+
+    <ProgressBar
+        android:id="@+id/connecting"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/info"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toEndOf="@+id/connect"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
